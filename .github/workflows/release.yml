@@ -1,0 +1,32 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: 'Type of release (release or prerelease)'
+        required: true
+        default: 'release'
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.releaseType }}" = "prerelease" ]; then
+            npx semantic-release --branches={ name: 'develop', prerelease: true, channel: 'develop' }
+          else
+            npx semantic-release
+          fi
