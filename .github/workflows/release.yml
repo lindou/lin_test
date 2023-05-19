@@ -22,15 +22,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ github.event.inputs.nodeVersion }}
+          node-version: '18'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Install semantic-release
+        run: yarn global add semantic-release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.releaseType }}" = "prerelease" ]; then
-            npx semantic-release --branches={ name: 'develop', prerelease: true, channel: 'develop' }
+            semantic-release --branches={ name: 'develop', prerelease: true, channel: 'develop' }
           else
-            npx semantic-release
+            semantic-release
           fi
