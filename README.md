@@ -1,4 +1,1 @@
-lin_test
-========
-
-first git repository
+semantic-release test 
