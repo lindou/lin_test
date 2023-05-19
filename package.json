@@ -1,0 +1,23 @@
+{
+  "name": "api-semantic-release-poc",
+  "version": "1.0.0",
+  "description": "Automate semantic versioning and package publishing",
+  "main": "app.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.2",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix",
+    "build": "tsc"
+  }
+}
