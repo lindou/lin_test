@@ -6,6 +6,10 @@ on:
         description: 'Type of release (release or prerelease)'
         required: true
         default: 'release'
+      nodeVersion:
+        description: 'Node.js version'
+        required: true
+        default: '18'
 jobs:
   release:
     name: Release
