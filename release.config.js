@@ -8,7 +8,8 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         releaseRules: [
-          { type: 'bug fix', release: 'patch' },
+          { type: 'bug', release: 'patch' },
+          { type: 'fix', release: 'patch' },
           { type: 'feature', release: 'minor' },
           { type: 'break', release: 'major' },
         ],
@@ -16,6 +17,7 @@ module.exports = {
     ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
+    '@semantic-release/npm',
     [
       '@semantic-release/git',
       {
