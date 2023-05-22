@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/lindou/lin_test/compare/v1.2.0...v1.2.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* another test ([89307b8](https://github.com/lindou/lin_test/commit/89307b8455230984007b5e9b0744fa7c7e1cd67d))
+
 # [1.2.0](https://github.com/lindou/lin_test/compare/v1.1.0...v1.2.0) (2023-05-22)
 
 # [1.1.0](https://github.com/lindou/lin_test/compare/v1.0.1...v1.1.0) (2023-05-19)
