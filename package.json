@@ -1,6 +1,6 @@
 {
   "name": "api-semantic-release-poc",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Automate semantic versioning and package publishing",
   "main": "app.js",
   "license": "MIT",
