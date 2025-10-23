@@ -1,0 +1,49 @@
+═══════════════════════════════════════════════════════════════════════════
+X→C MUTATION SEARCH CHECKLIST
+═══════════════════════════════════════════════════════════════════════════
+
+PRIORITY ORDER:
+
+[ ] 1. EGFR (aa 1-621)
+    Website: https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=EGFR
+    Look for: Any mutation ending in "C" in positions 1-621
+    Priority cancers: NSCLC, glioblastoma
+    Nanobody PDB: 4KRL, 5JTB ✓
+    
+[ ] 2. CDH1 (aa 1-700)
+    Website: https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=CDH1
+    Look for: X→C in extracellular cadherin repeats
+    Priority cancers: Gastric (diffuse), lobular breast
+    Nanobody PDB: Need to verify
+    
+[ ] 3. CD274/PD-L1 (all positions)
+    Website: https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=CD274
+    Look for: Any X→C
+    Priority cancers: Melanoma, NSCLC
+    Nanobody PDB: Likely exists, need codes
+    
+[ ] 4. ITGAV (integrins)
+    Website: https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=ITGAV
+    Look for: X→C in extracellular domain
+    Priority cancers: Metastatic cancers
+    Nanobody PDB: Need to verify
+
+═══════════════════════════════════════════════════════════════════════════
+WHAT CONSTITUTES A "HIT":
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Mutation frequency >1% in at least one cancer type
+✓ Recurrent (found in multiple independent samples)
+✓ In extracellular domain (accessible to nanobody)
+✓ Annotated as pathogenic/oncogenic (if available)
+
+═══════════════════════════════════════════════════════════════════════════
+AFTER FINDING X→C MUTATION:
+═══════════════════════════════════════════════════════════════════════════
+
+1. Download PDB structure of nanobody-target complex
+2. Locate mutation position in 3D structure
+3. Measure distance from nanobody binding site to mutation
+4. If distance < 20 Å → PROCEED WITH PROJECT!
+
+═══════════════════════════════════════════════════════════════════════════
